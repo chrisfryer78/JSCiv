@@ -11,6 +11,15 @@
     <script>
       function init() {
         console.log("init() successfully called.");
+        var height = document.getElementById("game-canvas").height;
+        var width = document.getElementById("game-canvas").width;		
+        stage = new PIXI.Container();
+        renderer = PIXI.autoDetectRenderer(
+          width,
+          height,
+          {view:document.getElementById("game-canvas")}
+        );
+        renderer.render(stage);
       }
     </script>
   </head>
